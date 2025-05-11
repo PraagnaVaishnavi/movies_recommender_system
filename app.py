@@ -10,7 +10,7 @@ movies = pd.DataFrame(movies_dict)
 similarity = pickle.load(open('similarity.pkl', 'rb'))
 def fetch_poster(movie_id):
     try:
-        url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=772bbcf62f42202cb9ee9a7aaf38635a&language=en-US"
+        url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=API_KEY&language=en-US"
         response = requests.get(url)
         data = response.json()
         if 'poster_path' in data:
